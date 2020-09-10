@@ -1,0 +1,46 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.navbar {
+  background-color: black !important;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: -1px;
+}
+
+#home-container {
+  margin-top: 25px
+}
+
+.jumbotron {
+  background-image: asset-url('cover.jpg');
+  background-position: center center;
+  background-repeat: repeat;
+  background-size: cover;
+  height: 425px;
+  color: #fff;
+}
+
+/* Styling for sticky footer classes */
+
+html, body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background: lightgray;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
