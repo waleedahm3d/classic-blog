@@ -9,6 +9,7 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
+      session[:user_id] = @user.id
       flash[:notice] = "Welcome #{@user.username}, You've successfully signed up!"
       redirect_to articles_path
     else
@@ -33,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def index
-    @users = User.paginate(page: params[:page], per_page: 1)
+    @users = User.paginate(page: params[:page], per_page: 2)
   end
 
   private
