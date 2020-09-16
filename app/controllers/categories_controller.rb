@@ -18,7 +18,6 @@ class CategoriesController < ApplicationController
 
   def index
     @categories = Category.paginate(page: params[:page], per_page: 10)
-    render json: CategorySerializer.new(@categories).serialized_json, status: :ok
   end
 
   def show

@@ -1,6 +1,6 @@
 class UserSerializer
   include FastJsonapi::ObjectSerializer
-  attribute :username, :email
+  attributes :username, :email
   attribute :articles do |user|
     ArticleSerializer.new(user.articles).serializable_hash
   end
