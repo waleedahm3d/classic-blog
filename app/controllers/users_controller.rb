@@ -45,6 +45,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.paginate(page: params[:page], per_page: 10)
+    render json: UserSerializer.new(@users).serialized_json, status: :ok
   end
 
   private
